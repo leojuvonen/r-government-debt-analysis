@@ -33,9 +33,9 @@ install.packages(c("forecast", "urca", "vars", "ggplot2", "dplyr", "readr"))
 
 ## Stationarity tests
 
-The analysis begins with evaluating the stationarity of the variables. The variables inluded in the analysis are Government Debt to GDP ratio (dbtp), private consumption (con) and GDP (gdp). The code is included in the scripts folder as debt_stationarity.R. The results were collected manually and included in the following table.
+The analysis begins with evaluating the stationarity of the variables. The variables inluded in the analysis are Government Debt to GDP ratio (DBTP), private consumption (PCON) and GDP (GDP). The code is included in the scripts folder as debt_stationarity.R. The results were collected manually and included in the following table.
 
-| Maa        | DBTP       | PCON       | BKT        | ΔDBTP       | ΔPCON       | ΔBKT        |
+| Maa        | DBTP       | PCON       | GDP        | ΔDBTP       | ΔPCON       | ΔGDP        |
 |------------|------------|------------|------------|-------------|-------------|-------------|
 | Belgia     | -2.2343    | 0.6106     | 0.6054     | -7.5136***  | -8.7745***  | -8.5758***  |
 | Bulgaria   | -4.4681*** | -0.9281    | -0.272     | -5.1492***  | -19.4766*** | -14.7005*** |
@@ -72,3 +72,4 @@ The analysis begins with evaluating the stationarity of the variables. The varia
 * (**): Statistically significant at 95% level  
 * (***): Statistically significant at 99% level  
 
+The results suggest that the variables are mostly unstationary before differencing. The test values were not statistically significant except for a few exceptions. The symbol Δ represents differencing and the tests were all significant at 99% level. 
