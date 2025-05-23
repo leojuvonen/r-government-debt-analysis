@@ -23,7 +23,7 @@ This project contains the core components of my master's thesis studying the eff
 
 ### Requirements
 
-This project was developed using R (version X.X.X). To run the analysis, you’ll need the following R packages installed:
+This project was developed using R (version 4.4.2). To run the analysis, you’ll need the following R packages installed:
 
 ```r
 install.packages(c("forecast", "urca", "vars", "ggplot2", "dplyr", "readr"))
