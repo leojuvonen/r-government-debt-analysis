@@ -14,8 +14,7 @@ This project contains the core components of my master's thesis studying the eff
  <code> r-government-debt-analysis/ 
   ├── data/ # Sample or anonymized datasets 
   ├── scripts/ # R scripts used in the analysis 
-  ├── output/ # Generated plots and tables
-  ├── report/ # PDF or summary of the thesis 
+  ├── images/ # Generated plots and tables
   └── README.md # Project overview and usage instructions </code> </code></pre>
 
 
