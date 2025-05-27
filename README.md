@@ -71,4 +71,4 @@ The analysis begins with evaluating the stationarity of the variables. The varia
 * (**): Statistically significant at 95% level  
 * (***): Statistically significant at 99% level  
 
-The results suggest that the variables are mostly unstationary before differencing. The test values were not statistically significant except for a few exceptions. The symbol Δ represents differencing and the tests were all significant at 99% level. 
+The results suggest that the variables are mostly unstationary before differencing. The test values were not statistically significant except for a few exceptions. The symbol Δ represents differencing and the tests were all significant at 99% level on the differenced variables. 
