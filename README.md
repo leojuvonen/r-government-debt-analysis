@@ -72,3 +72,55 @@ The analysis begins with evaluating the stationarity of the variables. The varia
 * (***): Statistically significant at 99% level  
 
 The results suggest that the variables are mostly unstationary before differencing. The test values were not statistically significant except for a few exceptions. The symbol Δ represents differencing and the tests were all significant at 99% level on the differenced variables. 
+
+## Regression Analysis
+
+Now that the variables are stationary we can move on in the analysis. We will build four panel regression models and assess which sufficiently describes our data. The models are as follows:
+
+**Model 1**
+
+$$
+\Delta PCON_{it} = \beta_1 \Delta DBTP_{it} + a_i + u_{it}
+$$
+
+**Model 2**
+
+$$
+\Delta PCON_{it} = \beta_1 \Delta DBTP_{it} + \beta_2 Q2 + \beta_3 Q3 + \beta_4 Q4 + a_i + u_{it}
+$$
+
+**Model 3**
+
+$$
+\Delta PCON_{it} = \beta_1 \Delta DBTP_{it} + \beta_2 Q2 + \beta_3 Q3 + \beta_4 Q4 + \beta_5 \Delta GDP + a_i + u_{it}
+$$
+
+**Model 4**
+
+$$
+\Delta PCON_{it} = \beta_1 \Delta DBTP_{it} + \beta_2 Q2 + \beta_3 Q3 + \beta_4 Q4 + \beta_5 \Delta GDP + \beta_6 (\Delta DBTP_{it})^2 + a_i + u_{it}
+$$
+
+Model 1 is a simple univariate model with private consumption as the dependent variable and government debt as the independent variable. Model 2 builds on this by adding dummy variables for all quarters, controlling for seasonality in the data. Model 3 adds GDP as a control variable. Finally model 4 adds government debt as a squared value to account for possible non-linearity. 
+
+Here are the results of all the panel regression models:
+
+| Variable        | Model 1       | Model 2       | Model 3       | Model 4       |
+| --------------- | ------------- | ------------- | ------------- | ------------- |
+| ΔDBTP           | -250.87\*\*\* | -196.03\*\*\* | -174.86\*\*\* | -177.93\*\*\* |
+|                 | (36.37)       | (34.96)       | (34.77)       | (35.48)       |
+| Q2              | -             | 3507.73\*\*\* | 2639.88\*\*\* | 2636.70\*\*\* |
+|                 |               | (237.71)      | (265.07)      | (265.21)      |
+| Q3              | -             | 3263.72\*\*\* | 2719.96\*\*\* | 2715.10\*\*\* |
+|                 |               | (241.44)      | (251.07)      | (251.35)      |
+| Q4              | -             | 3070.19\*\*\* | 2120.10\*\*\* | 2117.20\*\*\* |
+|                 |               | (241.67)      | (273.97)      | (274.10)      |
+| ΔGDP            | -             | -             | 1.29\*\*\*    | 1.29\*\*\*    |
+|                 |               |               | (0.18)        | (0.18)        |
+| (ΔDBTP)²        | -             | -             | -             | 0.0001        |
+|                 |               |               |               | (0.0003)      |
+| **Adjusted R²** | 0.007         | 0.101         | 0.117         | 0.117         |
+
+Model 3 seems to be the most fitting, because adding ΔGDP raises the adjusted $R^2$ slightly and the variable itself is statistically significant. Adding the squared government debt doesn't seem to have any impact so it is safe to say that Model 3 is sufficent. 
+
+The code for this section is provided in the scripts folder as debt_preg.R.
