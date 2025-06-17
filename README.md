@@ -195,6 +195,8 @@ run_adf_tests_diff(group1, "gdp", data_diff)
 run_adf_tests_diff(group2, "gdp", data_diff)
 ```
 
+The code for this section is provided in the scripts folder as debt_stationarity.R.
+
 ## Regression Analysis
 
 Now that the variables are stationary we can move on in the analysis. We will build four panel regression models and assess which sufficiently describes our data. The models are as follows:
@@ -290,6 +292,40 @@ preg4 <- plm(con_diff ~ dbtp_diff + Q2 + Q3 + Q4 + gdp_diff + exp(dbtp_diff), da
 summary(preg4)
 ```
 
+The code for this section is provided in the scripts folder as debt_preg.R.
+
 ## Panel Smooth Transition Regression (PSTR)
 
-The code for this section is provided in the scripts folder as debt_preg.R.
+The PSTR model is based on the third regression model which was assessed as the most descriptive. The model is presented mathematically as follows:
+
+\begin{align}
+     \Delta PCON_{it} &= \mu_i + \lambda_t + \beta_{1}\Delta DBTP_{it} + \phi_1 Q2 + \theta_1Q3 + \delta_1 Q4 + \psi_1 \Delta BKT_{it} \notag \\
+     &\quad  + [\beta_2\Delta DBTP_{it} + \phi_2 Q2 + \theta_2 Q3 + \delta_2 Q4  + \psi_2 \Delta BKT_{it}]g(DBTP_{it}; \gamma, c)
+     \label{eq52}
+\end{align}
+
+The process starts by assessing the linearity (or homogeneity) and number of transitions in the model.
+
+### Table: Homogeneity Tests by Transition Variable $DBTP$
+
+#### Results of Linearity (Homogeneity) Tests
+
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
+| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  |
+
+|     | WB_PA | WCB_PA |
+|-----|--------|---------|
+|     | 0      | 0       |
+
+---
+
+#### Series of Homogeneity Tests to Select Number of Transitions $m$
+
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
+| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  |
+
+|     | WB_PA | WCB_PA |
+|-----|--------|---------|
+|     | 0      | 0       |
