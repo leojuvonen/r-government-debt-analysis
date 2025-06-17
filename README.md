@@ -20,7 +20,6 @@ The data used in the project was gathered from Eurostat and consists of debt per
  <code> r-government-debt-analysis/ 
   ├── data/ # Sample or anonymized datasets 
   ├── scripts/ # R scripts used in the analysis 
-  ├── images/ # Generated plots and tables
   └── README.md # Project overview and usage instructions </code> </code></pre>
 
 
