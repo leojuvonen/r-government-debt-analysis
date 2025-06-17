@@ -308,7 +308,7 @@ $$
 
 The process starts by assessing the linearity (or homogeneity) and number of transitions in the model.
 
-### Table: Homogeneity Tests by Transition Variable $DBTP$
+### Homogeneity Tests by Transition Variable $DBTP$
 
 #### Results of Linearity (Homogeneity) Tests
 
@@ -334,7 +334,9 @@ The process starts by assessing the linearity (or homogeneity) and number of tra
 
 The homogeneity tests based on the transition variable DBTP partly reject linearity. While the Lagrange Multiplier tests show significant results, the HAC-consistent tests do not—raising concerns about heteroskedasticity and autocorrelation. The number of transitions is also debated across tests. To resolve these inconsistencies, Wild Bootstrap (WB) and Wild Cluster Bootstrap (WCB) methods are used, which consistently reject the null hypothesis. Thus, linearity can reasonably be rejected, and one transition is considered sufficient.
 
-### Table: Results of the PSTR Model
+### Results of the PSTR Model
+
+Next the parameters of the PSTR model will be assessed.
 
 #### Parameter Estimates
 
@@ -367,6 +369,36 @@ The homogeneity tests based on the transition variable DBTP partly reject linear
 > \* Statistically significant at the 90% level  
 > \*\* Statistically significant at the 95% level  
 > \*\*\* Statistically significant at the 99% level
+
+
+The PSTR model describes a negative relationship between government debt and private consumption. In the first regime, this negative effect is statistically significant at the 99% level and is relatively strong. In the second regime, the negative impact appears even more pronounced but is only significant at the 90% level, making its quantification less reliable. The transition parameters indicate that while the threshold parameter (c) is statistically significant at 99.690 (suggesting a debt-to-GDP ratio of 99.69% as the threshold), the gamma parameter is relatively low and not statistically significant, implying a steep but statistically uncertain transition between regimes.
+
+
+### Model Diagnostic Tests
+
+In the final stage of the analysis, the model's adequacy is evaluated. The diagnostic tests examine the stability of the estimated parameters and any residual nonlinearity in the model. The null hypothesis of the first test is that the parameters remain stable over time. For the second test, the null hypothesis is that no residual nonlinearity remains in the model—in other words, the model satisfactorily captures the prevailing nonlinearity. The results are shown in Table [Model Diagnostic Tests](#model-diagnostic-tests-table).
+
+#### Parameter Stability Test Results
+
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
+| 1   | 82.92         | 0.000   | 8.146         | 0.000   | 11.32          | 0.3334  | 1.112          | 0.349   |
+|     | WB\_PA       | 0.79    | WCB\_PA      | 0.99    |                |         |                |         |
+
+---
+
+#### Test for No Residual Nonlinearity
+
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
+| 1   | 53.25         | 0.000   | 5.231         | 0.000   | 13.87          | 0.179   | 1.362          | 0.1915  |
+|     | WB\_PA       | 1       | WCB\_PA      | 1       |                |         |                |         |
+
+---
+
+The interpretation of these results is initially challenging, as the LM tests and the HAC tests yield conflicting outcomes in both cases. The LM tests reject parameter stability and indicate that there is nonlinearity in the data that the model fails to capture. However, the WB and WCB tests support the null hypotheses, suggesting that the model's parameters are stable over time and that the model adequately accounts for the nonlinearity.
+
+
 
 
 
