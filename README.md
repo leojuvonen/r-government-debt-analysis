@@ -298,11 +298,13 @@ The code for this section is provided in the scripts folder as debt_preg.R.
 
 The PSTR model is based on the third regression model which was assessed as the most descriptive. The model is presented mathematically as follows:
 
-\begin{align}
-     \Delta PCON_{it} &= \mu_i + \lambda_t + \beta_{1}\Delta DBTP_{it} + \phi_1 Q2 + \theta_1Q3 + \delta_1 Q4 + \psi_1 \Delta BKT_{it} \notag \\
-     &\quad  + [\beta_2\Delta DBTP_{it} + \phi_2 Q2 + \theta_2 Q3 + \delta_2 Q4  + \psi_2 \Delta BKT_{it}]g(DBTP_{it}; \gamma, c)
-     \label{eq52}
-\end{align}
+$$
+\begin{aligned}
+\Delta PCON_{it} &= \mu_i + \lambda_t + \beta_{1}\Delta DBTP_{it} + \phi_1 Q2 + \theta_1 Q3 + \delta_1 Q4 + \psi_1 \Delta BKT_{it} \\
+&\quad + \left[ \beta_2 \Delta DBTP_{it} + \phi_2 Q2 + \theta_2 Q3 + \delta_2 Q4 + \psi_2 \Delta BKT_{it} \right] g(DBTP_{it}; \gamma, c)
+\end{aligned}
+$$
+
 
 The process starts by assessing the linearity (or homogeneity) and number of transitions in the model.
 
