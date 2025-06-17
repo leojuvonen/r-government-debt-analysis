@@ -4,7 +4,7 @@
 ## Overview
 
 This project contains the core components of my master's thesis studying the effect of government debt on private consumption using R.
-**Objective** of the project is to assess whether government debt affects private consumption, and whether the effect is positive, negative or non-linear. **Methods** used in the project consist of stationarity testing, linear regression, vector autoregression (VAR) and panel smooth transition regression (PSTR).
+**Objective** of the project is to assess whether government debt affects private consumption, and whether the effect is positive, negative or non-linear. **Methods** used in the project consist of stationarity testing, panel regression, and panel smooth transition regression (PSTR).
 
 ## Data Source
 
@@ -128,5 +128,7 @@ Here are the results of all the panel regression models:
 | **Adjusted R²** | 0.007         | 0.101         | 0.117         | 0.117         |
 
 Model 3 seems to be the most fitting, because adding ΔGDP raises the adjusted $R^2$ slightly and the variable itself is statistically significant. Adding the squared government debt doesn't seem to have any impact so it is safe to say that Model 3 is sufficent. According to all the models, government debts effect on private consumption seems to be negative and the effect is statistically significant.
+
+## Panel Smooth Transition Regression (PSTR)
 
 The code for this section is provided in the scripts folder as debt_preg.R.
