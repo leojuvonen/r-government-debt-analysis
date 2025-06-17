@@ -13,7 +13,7 @@ The data used in the project was gathered from Eurostat and consists of debt per
 ## Tools
 
 - Excel - data cleaning and preparation
-- R - data analysis 
+- R - data analysis (packages: "forecast", "urca", "vars", "ggplot2", "dplyr", "readr" and "PSTR"))
 
 ## Project Structure
 
