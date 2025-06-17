@@ -509,7 +509,7 @@ pstr_evalNonLin
 The code is provided in the scripts folder as debt_pstr.R.
 
 
-## Conclusions
+## Conclusion
 
 ### Regression Results
 - **OLS and Panel Regressions:**  
