@@ -331,3 +331,58 @@ The process starts by assessing the linearity (or homogeneity) and number of tra
 |     | WB_PA | WCB_PA |
 |-----|--------|---------|
 |     | 0      | 0       |
+
+The homogeneity tests based on the transition variable DBTP partly reject linearity. While the Lagrange Multiplier tests show significant results, the HAC-consistent tests do not—raising concerns about heteroskedasticity and autocorrelation. The number of transitions is also debated across tests. To resolve these inconsistencies, Wild Bootstrap (WB) and Wild Cluster Bootstrap (WCB) methods are used, which consistently reject the null hypothesis. Thus, linearity can reasonably be rejected, and one transition is considered sufficient.
+
+### Table: Results of the PSTR Model
+
+#### Parameter Estimates
+
+| Variable        | Regime 1       | Regime 2       |
+|-----------------|----------------|----------------|
+| $\Delta DBTP$   | -127.20 ***     | -183.50 *       |
+|                 | (42.25)        | (99.18)        |
+| Q2              | 2362           | 895.6          |
+|                 | (1493)         | (1707.0)       |
+| Q3              | 2037           | 4244 ***        |
+|                 | (1246)         | (1426)         |
+| Q4              | 2712           | -4394          |
+|                 | (1722)         | (3046)         |
+| $\Delta BKT$    | 0.7571         | 7.642 ***       |
+|                 | (0.4943)       | (1.948)        |
+
+---
+
+#### Transition Parameters
+
+| Parameter       | Value (Standard Error)   |
+|----------------|--------------------------|
+| $\gamma$        | 2.644 (3.155)             |
+| $c$             | 99.690 *** (1.694)        |
+
+---
+
+**N = 2716**
+
+> \* Statistically significant at the 90% level  
+> \*\* Statistically significant at the 95% level  
+> \*\*\* Statistically significant at the 99% level
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
