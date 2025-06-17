@@ -1,13 +1,19 @@
 # Government Debt's Impact on Private Consumption - Time Series Analysis in R
 
-This project contains the core components of my master's thesis studying the effect of government debt on private consumption using R.
-
 
 ## Overview
 
-- **Objective**: To assess whether government debt affects private consumption, and whether the effect is positive, negative or non-linear.
-- **Methods**: Stationarity testing, linear regression, vector autoregression (VAR) and panel smooth transition regression (PSTR)
-- **Tools**: R ( notably 'urca', 'forecast', 'vars', 'ggplot2', and 'PSTR among others)
+This project contains the core components of my master's thesis studying the effect of government debt on private consumption using R.
+**Objective** of the project is to assess whether government debt affects private consumption, and whether the effect is positive, negative or non-linear. **Methods** used in the project consist of stationarity testing, linear regression, vector autoregression (VAR) and panel smooth transition regression (PSTR).
+
+## Data Source
+
+The data used in the project was gathered from Eurostat and consists of debt per gdp, private consumption and gdp data. The data is located in the data folder as debt_data.xlsx.
+
+## Tools
+
+- Excel - data cleaning and preparation
+- R - data analysis 
 
 ## Project Structure
 
