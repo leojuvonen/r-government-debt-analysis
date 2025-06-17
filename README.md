@@ -510,7 +510,19 @@ pstr_evalNonLin
 The code is provided in the scripts folder as debt_pstr.R.
 
 
+## Conclusions
 
+### Regression Results
+- **OLS and Panel Regressions:**  
+  - The analyses consistently show statistically significant negative coefficients for government debt on private consumption.
+  - There is no evidence of a statistically significant positive impact on private consumption.
+
+### PSTR Model Results
+- A statistically significant threshold is identified at a government debt-to-GDP ratio of 99.69%.
+- **First Regime:**  
+  - Government debt has a statistically significant negative effect on private consumption.
+- **Second Regime:**  
+  - The negative effect becomes stronger, but it is statistically significant only at the 90% level, making it less reliably quantified.
 
 
 
