@@ -512,7 +512,7 @@ The code is provided in the scripts folder as debt_pstr.R.
 ## Conclusion
 
 ### Regression Results
-- **OLS and Panel Regressions:**  
+- **Panel Regressions:**  
   - The analyses consistently show statistically significant negative coefficients for government debt on private consumption.
   - There is no evidence of a statistically significant positive impact on private consumption.
 
