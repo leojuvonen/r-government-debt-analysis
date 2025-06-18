@@ -8,7 +8,7 @@ This project contains the core components of my master's thesis studying the eff
 
 ## Data Source
 
-The data used in the project was gathered from Eurostat and consists of debt per gdp, private consumption and gdp data. The data is located in the data folder as debt_data.xlsx.
+The data used in the project was gathered from Eurostat and consists of debt per gdp, private consumption and gdp data. The dataset consists of 28 European countries. The data is quarterly and falls within the timeframe 2000-2024, making the number of observations 98 per country before possible differentation. The data is located in the data folder as debt_data.xlsx.
 
 ## Tools
 
