@@ -244,6 +244,12 @@ Here are the results of all the panel regression models:
 |                 |               |               |               | (0.0003)      |
 | **Adjusted R²** | 0.007         | 0.101         | 0.117         | 0.117         |
 
+---
+
+* (*): Statistically significant at 90% level  
+* (**): Statistically significant at 95% level  
+* (***): Statistically significant at 99% level  
+
 Model 3 seems to be the most fitting, because adding ΔGDP raises the adjusted $R^2$ slightly and the variable itself is statistically significant. Adding the squared government debt doesn't seem to have any impact so it is safe to say that Model 3 is sufficent. According to all the models, government debts effect on private consumption seems to be negative and the effect is statistically significant.
 
 The code that provided these results is as follows:
