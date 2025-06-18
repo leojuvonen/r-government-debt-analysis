@@ -317,25 +317,19 @@ The process starts by assessing the linearity (or homogeneity) and number of tra
 
 #### Results of Linearity (Homogeneity) Tests
 
-| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
-|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
-| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  |
-
-|     | WB_PA | WCB_PA |
-|-----|--------|---------|
-|     | 0      | 0       |
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value | WB_PV | WCB_PV |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|--------|---------|
+| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  | 0      | 0       |
 
 ---
 
 #### Series of Homogeneity Tests to Select Number of Transitions $m$
 
-| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
-|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
-| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  |
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value | WB_PV | WCB_PV |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|--------|---------|
+| 1   | 198.3         | 0       | 39.1          | 0       | 7.557          | 0.1824  | 1.49           | 0.1896  | 0      | 0       |
 
-|     | WB_PA | WCB_PA |
-|-----|--------|---------|
-|     | 0      | 0       |
+
 
 The homogeneity tests based on the transition variable DBTP partly reject linearity. While the Lagrange Multiplier tests show significant results, the HAC-consistent tests do not—raising concerns about heteroskedasticity and autocorrelation. The number of transitions is also debated across tests. To resolve these inconsistencies, Wild Bootstrap (WB) and Wild Cluster Bootstrap (WCB) methods are used, which consistently reject the null hypothesis. Thus, linearity can reasonably be rejected, and one transition is considered sufficient.
 
@@ -385,19 +379,18 @@ In the final stage of the analysis, the model's adequacy is evaluated. The diagn
 
 #### Parameter Stability Test Results
 
-| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
-|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
-| 1   | 82.92         | 0.000   | 8.146         | 0.000   | 11.32          | 0.3334  | 1.112          | 0.349   |
-|     | WB\_PA       | 0.79    | WCB\_PA      | 0.99    |                |         |                |         |
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value | WB\_PV       |WCB\_PV      |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|---------|---------|
+| 1   | 82.92         | 0.000   | 8.146         | 0.000   | 11.32          | 0.3334  | 1.112          | 0.349   |0.79    |   0.99    |
+
 
 ---
 
 #### Test for No Residual Nonlinearity
 
-| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value |
-|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|
-| 1   | 53.25         | 0.000   | 5.231         | 0.000   | 13.87          | 0.179   | 1.362          | 0.1915  |
-|     | WB\_PA       | 1       | WCB\_PA      | 1       |                |         |                |         |
+| $m$ | $\text{LM}_X$ | p-value | $\text{LM}_F$ | p-value | $\text{HAC}_X$ | p-value | $\text{HAC}_F$ | p-value | WB\_PV       |WCB\_PV      |
+|-----|---------------|---------|---------------|---------|----------------|---------|----------------|---------|---------|---------|
+| 1   | 53.25         | 0.000   | 5.231         | 0.000   | 13.87          | 0.179   | 1.362          | 0.1915  | 1        |  1     |
 
 ---
 
