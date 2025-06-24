@@ -1,17 +1,16 @@
 # Stationarity tests for government debt, consumption, and GDP data
 # Data is quarterly and stored in 'data/data.xlsx'
 
-library(readxl)
-library(lubridate)
-library(zoo)
-library(dplyr)
-library(urca)
-library(ggplot2)
-library(tidyr)
+#install the required packages
+#install.packages("readxl")
+#install.packages("zoo")
+#install.packages("urca")
 
+library(readxl)
 # Load data
 data <- read_excel("data/debt_data.xlsx")
 
+library(zoo)
 # Convert TIME to quarterly time series format
 data$TIME <- as.yearqtr(data$TIME, "%Y-Q%q")
 
@@ -24,6 +23,7 @@ group2 <- c("Lithuania", "Luxembourg", "Hungary", "Malta", "Netherlands", "Austr
 
 countries <- c(group1, group2)
 
+library(urca)
 # Save results to a data frame
 
 results <- data.frame()
@@ -110,6 +110,10 @@ run_adf_tests_diff(group2, "con", data_diff)
 # Run ADF tests on differenced GDP variables
 run_adf_tests_diff(group1, "gdp", data_diff)
 run_adf_tests_diff(group2, "gdp", data_diff)
+
+
+
+
 
 
 
